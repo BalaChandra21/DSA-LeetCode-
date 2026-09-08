@@ -1,0 +1,23 @@
+class Solution {
+    public String baseNeg2(int n) {
+        if (n == 0)
+            return "0";
+
+        String ans = "";
+
+        while (n != 0) {
+            int r = n % -2;
+
+            if (r < 0) {
+                r += 2;
+                n = (n - r) / -2;
+            } else {
+                n = n / -2;
+            }
+
+            ans = r + ans;
+        }
+
+        return ans;
+    }
+}
