@@ -1,12 +1,14 @@
 class Solution {
     public String addBinary(String a, String b) {
-        StringBuilder result = new StringBuilder();
 
         int i = a.length() - 1;
         int j = b.length() - 1;
         int carry = 0;
 
+        StringBuilder result = new StringBuilder();
+
         while (i >= 0 || j >= 0 || carry > 0) {
+
             int sum = carry;
 
             if (i >= 0) {
